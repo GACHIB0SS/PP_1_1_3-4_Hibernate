@@ -39,7 +39,7 @@ public class Util {
                 configuration.setProperties(settings);
                 configuration.addAnnotatedClass(User.class);
 
-                ServiceRegistry registry = (ServiceRegistry) new StandardServiceRegistryBuilder()
+                ServiceRegistry registry = new StandardServiceRegistryBuilder()
                         .applySettings(configuration.getProperties()).build();
 
                 factory = configuration.buildSessionFactory(registry);
